@@ -8,7 +8,9 @@ function Contact() {
     ].join(''),
     controller: function ($rootScope) {
       this.remove = function (id) {
-
+	// var elem = document.getElementById(id);
+	// elem.parentNode.removeChild(elem);
+	$rootScope.$broadcast('remove', id);
       };
     },
     controllerAs: 'ctrl',
